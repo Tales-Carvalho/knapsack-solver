@@ -1,8 +1,6 @@
 import os, sys
 import time
 
-# TODO: parse arguments accordingly to new changes
-
 if len(sys.argv) < 2:
 	print(f"Not enough arguments. Usage: python3 {sys.argv[0]} cpp|py [-m greedy|dp|bnb] [i]")
 elif sys.argv[1] != "py" and sys.argv[1] != "cpp":
@@ -25,6 +23,8 @@ else:
 	ignore_warning = ""
 	if len(sys.argv) > 3:
 		ignore_warning = sys.argv[3]
+
+	os.system("mkdir output")
 	
 	for file in os.listdir('input'):
 		print(" ===//===//===//===//===//===//===//===//===//=== ")
